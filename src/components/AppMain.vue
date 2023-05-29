@@ -6,7 +6,7 @@ export default {};
   <main>
     <div class="jumbotron">
       <div class="left-arrow">
-        <img src="../../public/img/left-arrow.svg" alt="" />
+        <font-awesome-icon :icon="['fass', 'arrow-left']" />
       </div>
       <div class="jumbo-title">
         <span>CINEMATO STUDIO</span>
@@ -17,7 +17,7 @@ export default {};
         <span class="jumbo-read-more">READ MORE</span>
       </div>
       <div class="right-arrow">
-        <img src="../../public/img/right-arrow.svg" alt="" />
+        <font-awesome-icon :icon="['fas', 'arrow-right']" />
       </div>
     </div>
   </main>
@@ -38,14 +38,31 @@ export default {};
   }
 
   .jumbo-title {
-    margin-right: 28rem;
+    margin-right: 25rem;
+    .jumbo-read-more {
+      padding: 0.5rem 1rem;
+      color: black;
+      background-color: white;
+      font-size: 0.7rem;
+      cursor: pointer;
+    }
   }
-  .jumbo-read-more {
-    padding: 0.5rem 1rem;
-    color: black;
-    background-color: white;
-    font-size: 0.7rem;
+
+  .left-arrow,
+  .right-arrow {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.7rem;
+    background-color: black;
+    opacity: 0.6;
     cursor: pointer;
+  }
+
+  .left-arrow {
+    margin-left: 1rem;
+  }
+
+  .right-arrow {
+    margin-right: 1rem;
   }
 }
 </style>
