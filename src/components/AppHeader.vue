@@ -1,4 +1,7 @@
 <script>
+import NavbarMenu from "./NavbarMenu.vue";
+import NavbarSocial from "./NavbarSocial.vue";
+
 export default {
   data() {
     return {
@@ -44,6 +47,10 @@ export default {
       ],
     };
   },
+  components: {
+    NavbarMenu,
+    NavbarSocial,
+  },
 };
 </script>
 
@@ -55,25 +62,32 @@ export default {
       </div>
       <div>
         <ul class="nav-menu">
-          <li v-for="voices in arrNavbarMenu" :key="voices">
-            <a href>
-              {{ voices.voice }}
-            </a>
-          </li>
+          <NavbarMenu
+            v-for="voices in arrNavbarMenu"
+            :key="voices"
+            :voices="voices"
+          />
         </ul>
       </div>
       <div class="nav-social">
-        <a href="#" v-for="socialMedia in arrIcons" :key="socialMedia">
-          <font-awesome-icon :icon="socialMedia.icon" />
-        </a>
+        <NavbarSocial
+          v-for="socialMedia in arrIcons"
+          :key="socialMedia"
+          :socialMedia="socialMedia"
+        />
       </div>
     </nav>
   </header>
 </template>
 
 <style lang="scss" scoped>
+// GENERAL
+
 header {
   height: 10vh;
+
+  // NAVBAR
+
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -96,14 +110,5 @@ header {
       padding-right: 1rem;
     }
   }
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: black;
 }
 </style>
