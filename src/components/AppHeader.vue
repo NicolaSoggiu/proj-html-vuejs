@@ -1,5 +1,5 @@
 <script>
-import NavbarMenu from "./NavbarMenu.vue";
+import NavbarMenu from "./NavBarMenu.vue";
 import NavbarSocial from "./NavbarSocial.vue";
 
 export default {

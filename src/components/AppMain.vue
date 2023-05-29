@@ -1,5 +1,11 @@
 <script>
-export default {};
+import AppWhatWeDo from "./AppWhatWeDo.vue";
+
+export default {
+  components: {
+    AppWhatWeDo,
+  },
+};
 </script>
 
 <template>
@@ -20,6 +26,7 @@ export default {};
         <font-awesome-icon :icon="['fas', 'arrow-right']" />
       </div>
     </div>
+    <AppWhatWeDo />
   </main>
 </template>
 
