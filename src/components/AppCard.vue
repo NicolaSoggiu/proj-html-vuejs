@@ -2,6 +2,7 @@
 export default {
   props: {
     card: Object,
+    watch: Object,
   },
 };
 </script>
