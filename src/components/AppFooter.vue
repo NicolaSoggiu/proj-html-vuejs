@@ -142,6 +142,11 @@ footer {
 .footer-column li {
   list-style: none;
   padding: 0.4rem 0;
+  color: lightgrey;
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
 }
 
 .license {

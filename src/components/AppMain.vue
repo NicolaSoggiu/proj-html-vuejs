@@ -17,7 +17,7 @@ export default {
           text: "OUR PROJECTS",
         },
         {
-          number: "1.906",
+          number: "1,906",
           text: "CUP OF COFFEE",
         },
         {
