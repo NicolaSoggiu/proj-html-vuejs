@@ -1,6 +1,7 @@
 <script>
 import AppWatchlist from "./AppWatchlist.vue";
 import AppWhatWeDo from "./AppWhatWeDo.vue";
+import AppMeet from "./AppMeet.vue";
 
 export default {
   data() {
@@ -28,6 +29,7 @@ export default {
   components: {
     AppWhatWeDo,
     AppWatchlist,
+    AppMeet,
   },
 };
 </script>
@@ -67,14 +69,13 @@ export default {
       </div>
     </div>
     <AppWatchlist />
-    <!-- SECTION BEST HITS MOVIES -->
     <div class="stats">
       <div class="info" v-for="info in arrStats" :key="info">
         <h1>{{ info.number }}</h1>
         <span>{{ info.text }}</span>
       </div>
     </div>
-    <!-- SECTION MEET THE TEAM -->
+    <AppMeet />
     <div class="testimonials">
       <div class="testimonials-text">
         <font-awesome-icon
