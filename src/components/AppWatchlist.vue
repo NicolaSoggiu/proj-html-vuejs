@@ -45,9 +45,31 @@ export default {
 </script>
 
 <template>
+  <div class="text">
+    <span>YOUR WATCHLIST</span>
+    <h1>BEST HITS MOVIES</h1>
+  </div>
   <div class="watchlist">
-    <AppCard v-for="card in arrWatchList" :key="card" :card="watch" />
+    <AppCard v-for="watch in arrWatchList" :key="watch" :data="watch" />
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.text {
+  text-align: center;
+  span {
+    font-size: 0.7rem;
+  }
+  h1 {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+.watchlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-inline: 15rem;
+  margin-bottom: 4rem;
+}
+</style>

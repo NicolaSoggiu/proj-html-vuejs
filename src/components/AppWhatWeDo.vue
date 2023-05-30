@@ -50,7 +50,7 @@ export default {
     <h2>THIS IS WHAT WE DO</h2>
   </div>
   <div class="What-we-do">
-    <AppCard v-for="card in arrWhatWeDo" :key="card" :card="card" />
+    <AppCard v-for="card in arrWhatWeDo" :key="card" :data="card" />
   </div>
 </template>
 

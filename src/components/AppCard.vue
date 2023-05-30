@@ -1,8 +1,7 @@
 <script>
 export default {
   props: {
-    card: Object,
-    watch: Object,
+    data: Object,
   },
 };
 </script>
@@ -10,10 +9,10 @@ export default {
 <template>
   <div class="card">
     <div class="img-container">
-      <img :src="card.img" alt="" />
+      <img :src="data.img" alt="" />
     </div>
-    <h2>{{ card.title }}</h2>
-    <span>{{ card.text }}</span>
+    <h2>{{ data.title }}</h2>
+    <span>{{ data.text }}</span>
   </div>
 </template>
 

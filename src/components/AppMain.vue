@@ -1,4 +1,5 @@
 <script>
+import AppWatchlist from "./AppWatchlist.vue";
 import AppWhatWeDo from "./AppWhatWeDo.vue";
 
 export default {
@@ -26,6 +27,7 @@ export default {
   },
   components: {
     AppWhatWeDo,
+    AppWatchlist,
   },
 };
 </script>
@@ -64,6 +66,7 @@ export default {
         <span class="about-read-more">READ MORE</span>
       </div>
     </div>
+    <AppWatchlist />
     <!-- SECTION BEST HITS MOVIES -->
     <div class="stats">
       <div class="info" v-for="info in arrStats" :key="info">
