@@ -95,7 +95,8 @@ export default {
       </div>
     </div>
     <div class="license">
-      <span>2023 All Rights Reserved. Developed By TemplateMela</span>
+      <div class="line"></div>
+      <span> &copy; 2023 All Rights Reserved. Developed By TemplateMela</span>
     </div>
   </footer>
 </template>
@@ -174,5 +175,13 @@ footer {
 .btn {
   width: 150px;
   padding: 0.5rem;
+}
+
+.line {
+  height: 1px;
+  background-color: white;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
 </style>

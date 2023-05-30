@@ -116,6 +116,11 @@ export default {
           <span>Designer</span>
         </div>
       </div>
+      <div class="dot-container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
     </div>
     <AppArticles />
     <div class="logos">
@@ -278,6 +283,24 @@ export default {
       flex-direction: column;
       justify-content: center;
       color: white;
+    }
+  }
+  .dot-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  .dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: lightgrey;
+    margin-right: 5px;
+    &:hover {
+      background-color: white;
+      cursor: pointer;
     }
   }
 }

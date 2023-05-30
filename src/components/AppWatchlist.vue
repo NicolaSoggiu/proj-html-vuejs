@@ -45,12 +45,19 @@ export default {
 </script>
 
 <template>
-  <div class="text">
-    <span>YOUR WATCHLIST</span>
-    <h1>BEST HITS MOVIES</h1>
-  </div>
-  <div class="watchlist">
-    <AppCard v-for="watch in arrWatchList" :key="watch" :data="watch" />
+  <div>
+    <div class="text">
+      <span>YOUR WATCHLIST</span>
+      <h1>BEST HITS MOVIES</h1>
+    </div>
+    <div class="watchlist">
+      <AppCard
+        v-for="watch in arrWatchList"
+        :key="watch.title"
+        :data="watch"
+        :is-custom-style="isCustomStyle"
+      />
+    </div>
   </div>
 </template>
 
