@@ -8,10 +8,31 @@ export default {
 
 <template>
   <div class="card">
-    <img :src="card.img" alt="" />
+    <div class="img-container">
+      <img :src="card.img" alt="" />
+    </div>
     <h2>{{ card.title }}</h2>
     <span>{{ card.text }}</span>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.card {
+  width: calc((100% / 3) - 2rem);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  img {
+    aspect-ratio: 1 / 1;
+    width: 60px;
+    padding-bottom: 1rem;
+  }
+  h2 {
+    padding-bottom: 1rem;
+    font-size: 1rem;
+  }
+  span {
+    font-size: 0.6rem;
+  }
+}
+</style>

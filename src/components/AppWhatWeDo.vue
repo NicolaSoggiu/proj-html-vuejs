@@ -11,22 +11,22 @@ export default {
           text: "Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus.",
         },
         {
-          img: "../../public/img/image15.svg",
+          img: "../../public/img/image16.svg",
           title: "NEW TECHNOLOGIES",
           text: "Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus.",
         },
         {
-          img: "../../public/img/image16.svg",
+          img: "../../public/img/image18.svg",
           title: "VERSITILE ACTORS",
           text: "Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus.",
         },
         {
-          img: "../../public/img/image17.svg",
+          img: "../../public/img/image15.svg",
           title: "TOP DIRECTORS",
           text: "Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus.",
         },
         {
-          img: "../../public/img/image18.svg",
+          img: "../../public/img/image17.svg",
           title: "MINUTE EDITING",
           text: "Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus.",
         },
@@ -45,13 +45,36 @@ export default {
 </script>
 
 <template>
+  <div class="text">
+    <span>PELICULA STUDIO</span>
+    <h2>THIS IS WHAT WE DO</h2>
+  </div>
   <div class="What-we-do">
     <AppCard v-for="card in arrWhatWeDo" :key="card" :card="card" />
   </div>
 </template>
 
 <style lang="scss" scoped>
-.what-we-do {
+.text {
+  text-align: center;
+  padding-top: 3rem;
+  span {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.What-we-do {
+  width: 1000px;
+  margin: auto;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 </style>
