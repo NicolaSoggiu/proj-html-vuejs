@@ -12,7 +12,7 @@ export default {
       ],
       arrInfo: [
         {
-          title: "Information",
+          title: "INFORMATION",
           voice1: "Product Support",
           voice2: "Checkout",
           voice3: "Report Abuse",
@@ -40,9 +40,26 @@ export default {
     <div class="footer-container">
       <div class="footer-column">
         <h3>{{ arrContact[0].title }}</h3>
-        <p>{{ arrContact[0].location }}</p>
-        <p>{{ arrContact[0].number }}</p>
-        <p>{{ arrContact[0].mail }}</p>
+        <ul>
+          <li>
+            <font-awesome-icon
+              class="footer-icon"
+              :icon="['fas', 'location-dot']"
+            />
+            {{ arrContact[0].location }}
+          </li>
+          <li>
+            <font-awesome-icon class="footer-icon" :icon="['fas', 'phone']" />
+            {{ arrContact[0].number }}
+          </li>
+          <li>
+            <font-awesome-icon
+              class="footer-icon"
+              :icon="['fas', 'envelope']"
+            />
+            {{ arrContact[0].mail }}
+          </li>
+        </ul>
       </div>
       <div class="footer-column">
         <h3>{{ arrInfo[0].title }}</h3>
@@ -67,12 +84,13 @@ export default {
       <div class="footer-column">
         <h3>NEWSLETTER</h3>
         <ul>
-          <li>Subscribe To Receive Inspiration,</li>
-          <li>Ideas & News In Your Inbox.</li>
+          <li class="newsletter-text">
+            Subscribe To Receive Inspiration, Ideas & News In Your Inbox.
+          </li>
         </ul>
         <div class="form">
           <input type="text" placeholder="Enter Your Email" />
-          <button>SUBSCRIBE</button>
+          <button class="btn">SUBSCRIBE</button>
         </div>
       </div>
     </div>
@@ -89,15 +107,21 @@ footer {
 }
 
 .footer-container {
+  width: 1000px;
+  margin: auto;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: start;
   height: 100%;
   color: white;
+  padding: 0 0.5rem;
+  gap: 2rem;
 }
 
 .footer-column {
   text-align: left;
+  padding-top: 6rem;
+  flex: 0 0 25%;
   .form {
     display: flex;
     flex-direction: column;
@@ -105,18 +129,19 @@ footer {
 }
 
 .footer-column h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
 .footer-column p,
 .footer-column ul {
   font-size: 0.8rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .footer-column li {
   list-style: none;
+  padding: 0.4rem 0;
 }
 
 .license {
@@ -124,5 +149,25 @@ footer {
   color: white;
   text-align: center;
   padding: 2rem 0;
+}
+
+.footer-icon {
+  padding-right: 1rem;
+}
+
+.newsletter-text {
+  line-height: 1.5rem;
+}
+
+.form input {
+  background-color: #1c1c1c;
+  color: lightgrey;
+  padding: 0.3rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  width: 150px;
+  padding: 0.5rem;
 }
 </style>

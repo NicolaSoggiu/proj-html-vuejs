@@ -98,6 +98,7 @@ export default {
     <div class="testimonials">
       <div class="testimonials-text">
         <font-awesome-icon
+          class="quote-icon"
           :icon="['fas', 'quote-left']"
           style="color: #fcfcfd"
         />
@@ -252,7 +253,7 @@ export default {
   background-image: url(../../public/img/Parallax-02.jpg);
   background-size: cover;
   .testimonials-text {
-    padding-top: 8rem;
+    padding-top: 6rem;
     padding-bottom: 1rem;
     padding-inline: 25rem;
     display: flex;
@@ -261,6 +262,9 @@ export default {
     color: white;
     text-align: center;
     line-height: 2rem;
+    .quote-icon {
+      font-size: 70px;
+    }
   }
   .employees {
     display: flex;
@@ -296,13 +300,13 @@ export default {
 .collaborate {
   display: flex;
   justify-content: space-around;
-  align-content: center;
   padding: 5rem 15rem;
   gap: 3rem;
   margin: auto;
   .left {
     display: flex;
     flex-direction: column;
+    flex: 0 0 55%;
     h1 {
       margin: 1rem 0;
     }
@@ -318,11 +322,13 @@ export default {
     .number {
       display: flex;
       gap: 1rem;
+      flex-grow: 1;
     }
     input {
       background-color: #f2f2f2;
       border: #f2f2f2;
       padding: 0.5rem;
+      padding-right: 5rem;
     }
     .name {
       margin-top: 3rem;
@@ -338,7 +344,7 @@ export default {
     .sub-button {
       background-color: black;
       color: white;
-      padding: 0.3rem 0;
+      padding: 0.5rem 0;
       cursor: pointer;
     }
   }
