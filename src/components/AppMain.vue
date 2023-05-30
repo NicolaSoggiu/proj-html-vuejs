@@ -25,6 +25,23 @@ export default {
           text: "OUR AWARDS",
         },
       ],
+      arrLogos: [
+        {
+          img: "../../public/img/03.png",
+        },
+        {
+          img: "../../public/img/04.png",
+        },
+        {
+          img: "../../public/img/05.png",
+        },
+        {
+          img: "../../public/img/01.png",
+        },
+        {
+          img: "../../public/img/02.png",
+        },
+      ],
     };
   },
   components: {
@@ -100,13 +117,8 @@ export default {
       </div>
     </div>
     <AppArticles />
-    <!-- SECTION ARTICLES UPDATE DAILY -->
     <div class="logos">
-      <img src="../../public/img/03.png" alt="" />
-      <img src="../../public/img/04.png" alt="" />
-      <img src="../../public/img/05.png" alt="" />
-      <img src="../../public/img/01.png" alt="" />
-      <img src="../../public/img/02.png" alt="" />
+      <img v-for="logo in arrLogos" :key="logo" :src="logo.img" alt="" />
     </div>
     <div class="collaborate">
       <div class="left">
