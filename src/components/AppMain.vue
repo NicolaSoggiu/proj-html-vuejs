@@ -2,6 +2,7 @@
 import AppWatchlist from "./AppWatchlist.vue";
 import AppWhatWeDo from "./AppWhatWeDo.vue";
 import AppMeet from "./AppMeet.vue";
+import AppArticles from "./AppArticles.vue";
 
 export default {
   data() {
@@ -30,6 +31,7 @@ export default {
     AppWhatWeDo,
     AppWatchlist,
     AppMeet,
+    AppArticles,
   },
 };
 </script>
@@ -97,6 +99,7 @@ export default {
         </div>
       </div>
     </div>
+    <AppArticles />
     <!-- SECTION ARTICLES UPDATE DAILY -->
     <div class="logos">
       <img src="../../public/img/03.png" alt="" />

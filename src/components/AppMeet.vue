@@ -6,22 +6,22 @@ export default {
     return {
       arrMeet: [
         {
-          img: "../../public/img/Gallery-01.jpg",
+          img: "../../public/img/Team-01.jpg",
           title: "FABRICIO GUERRA",
           text: "Main Director",
         },
         {
-          img: "../../public/img/Gallery-02.jpg",
+          img: "../../public/img/Team-02.jpg",
           title: "UMBERTO PAGODA",
           text: "Main Writer",
         },
         {
-          img: "../../public/img/Gallery-03.jpg",
+          img: "../../public/img/Team-03.jpg",
           title: "GLORIA RICASSO",
           text: "Main Producer",
         },
         {
-          img: "../../public/img/Gallery-04.jpg",
+          img: "../../public/img/Team-04.jpg",
           title: "LIO NAPOIN",
           text: "Cameraman",
         },
