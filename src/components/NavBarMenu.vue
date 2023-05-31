@@ -38,13 +38,19 @@ a {
 }
 
 .dropdown-menu {
-  margin-top: 1rem;
+  z-index: 4;
+  position: fixed;
 }
 
 .drop {
   background-color: black;
-  color: white;
+  color: lightgrey;
+  color: grey;
   padding: 1rem;
   border: 1px solid white;
+  cursor: pointer;
+  &:hover {
+    color: white;
+  }
 }
 </style>
