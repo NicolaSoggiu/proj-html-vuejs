@@ -35,7 +35,12 @@ export default {
     <h1>ARTICLES UPDATE DAILY</h1>
   </div>
   <div class="articles">
-    <AppCard v-for="article in arrArticles" :key="article" :data="article" />
+    <AppCard
+      class="card"
+      v-for="article in arrArticles"
+      :key="article"
+      :data="article"
+    />
   </div>
 </template>
 
@@ -59,5 +64,24 @@ export default {
   padding-inline: 12rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
+}
+
+.card {
+  width: calc((100% / 3) - 2rem);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  img {
+    aspect-ratio: 1 / 1;
+    width: 60px;
+    padding-bottom: 1rem;
+  }
+  h2 {
+    padding-bottom: 1rem;
+    font-size: 1rem;
+  }
+  span {
+    font-size: 0.6rem;
+  }
 }
 </style>

@@ -38,6 +38,12 @@ export default {
       ],
     };
   },
+  methods: {
+    getCardClass(index) {
+      const image = "imgclass1";
+      return image;
+    },
+  },
   components: {
     AppCard,
   },
@@ -52,10 +58,10 @@ export default {
     </div>
     <div class="watchlist">
       <AppCard
-        v-for="watch in arrWatchList"
+        v-for="(watch, index) in arrWatchList"
         :key="watch.title"
         :data="watch"
-        :is-custom-style="isCustomStyle"
+        :img-class="getCardClass(index)"
       />
     </div>
   </div>
@@ -72,11 +78,29 @@ export default {
     margin-bottom: 2rem;
   }
 }
+
 .watchlist {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-inline: 15rem;
+  width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 4rem;
   margin-bottom: 4rem;
+}
+
+h2 {
+  padding-bottom: 1rem;
+  font-size: 1rem;
+}
+span {
+  font-size: 0.6rem;
+}
+
+.imgclass1 {
+  width: 200px;
 }
 </style>

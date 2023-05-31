@@ -168,8 +168,9 @@ footer {
 .form input {
   background-color: #1c1c1c;
   color: lightgrey;
-  padding: 0.3rem 1rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 0.5rem;
+  border: 0;
 }
 
 .btn {
