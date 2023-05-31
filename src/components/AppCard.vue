@@ -17,18 +17,23 @@ export default {
 
 <style lang="scss" scoped>
 .imgclass1 {
-  padding-bottom: 1rem;
+  // padding-bottom: 1rem;
   width: 320px;
 }
 
 .imgclass2 {
-  padding-bottom: 1rem;
+  // padding-bottom: 1rem;
   width: 250px;
 }
 
 .imgclass3 {
-  padding-bottom: 1rem;
+  // padding-bottom: 1rem;
   width: 60px;
+}
+
+h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 span {

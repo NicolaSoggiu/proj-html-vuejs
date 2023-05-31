@@ -48,21 +48,20 @@ a {
 .dropdown-menu {
   position: fixed;
   margin-top: 1.5rem;
+  .drop {
+    background-color: black;
+    color: lightgrey;
+    color: grey;
+    padding: 1rem;
+    border: 1px solid white;
+    cursor: pointer;
+    &:hover {
+      color: white;
+    }
+  }
 }
 
 .active + .dropdown-menu {
   display: block;
-}
-
-.drop {
-  background-color: black;
-  color: lightgrey;
-  color: grey;
-  padding: 1rem;
-  border: 1px solid white;
-  cursor: pointer;
-  &:hover {
-    color: white;
-  }
 }
 </style>

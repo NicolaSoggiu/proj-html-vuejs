@@ -85,7 +85,6 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 3rem;
-  justify-items: center;
   align-items: center;
   text-align: center;
   margin-top: 1rem;

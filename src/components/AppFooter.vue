@@ -117,15 +117,14 @@ footer {
   color: white;
   padding: 0 0.5rem;
   gap: 2rem;
-}
-
-.footer-column {
-  text-align: left;
-  padding-top: 6rem;
-  flex: 0 0 25%;
-  .form {
-    display: flex;
-    flex-direction: column;
+  .footer-column {
+    text-align: left;
+    padding-top: 6rem;
+    flex: 0 0 25%;
+    .form {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
@@ -149,18 +148,9 @@ footer {
     cursor: pointer;
   }
 }
-
-.license {
-  background-color: #111111;
-  color: white;
-  text-align: center;
-  padding: 2rem 0;
-}
-
 .footer-icon {
   padding-right: 1rem;
 }
-
 .newsletter-text {
   line-height: 1.5rem;
 }
@@ -178,11 +168,17 @@ footer {
   padding: 0.5rem;
 }
 
-.line {
-  height: 1px;
-  background-color: white;
-  width: 70%;
-  margin: 0 auto;
-  margin-bottom: 2rem;
+.license {
+  background-color: #111111;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  .line {
+    height: 1px;
+    background-color: white;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
 }
 </style>
