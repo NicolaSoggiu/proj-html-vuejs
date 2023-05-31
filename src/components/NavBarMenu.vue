@@ -3,14 +3,27 @@ export default {
   props: {
     voices: Object,
   },
+  data() {
+    return {
+      isOpen: false,
+    };
+  },
+  methods: {
+    toggleDropdown() {
+      this.isOpen = !this.isOpen;
+    },
+  },
 };
 </script>
 
 <template>
   <li>
-    <a href="#">
-      {{ voices.voice }}
-    </a>
+    <a href="#" @click="toggleDropdown">{{ voices.voice }}</a>
+    <ul v-if="isOpen" class="dropdown-menu">
+      <li class="drop">SERVICES</li>
+      <li class="drop">OUR WORK FLOW</li>
+      <li class="drop">VIDEO THUMBNAIL TYPE</li>
+    </ul>
   </li>
 </template>
 
@@ -22,5 +35,16 @@ li {
 a {
   text-decoration: none;
   color: black;
+}
+
+.dropdown-menu {
+  margin-top: 1rem;
+}
+
+.drop {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  border: 1px solid white;
 }
 </style>
