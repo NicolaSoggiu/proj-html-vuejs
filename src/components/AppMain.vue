@@ -62,15 +62,35 @@ export default {
           readMore: "READ MORE",
         },
       ],
+      arrTestimonials: [
+        {
+          text: "Curabitur bibendum ex ut sapien blandit. Nunc lobartis mi dui, id Etiam tempor sit amet in bibendum. Nunc eros risus, pellentesque a augue Pellentesque fringilla eget mi ei mollis. Mauris commodo.",
+          img: "../../public/img/01.jpg",
+          name: "JENNIFER ROSE",
+          role: "Main Director",
+        },
+        {
+          text: "Curabitur bibendum ex ut sapien blandit. Nunc lobartis mi dui, id Etiam tempor sit amet in bibendum. Nunc eros risus, pellentesque a augue Pellentesque fringilla eget mi ei mollis. Mauris commodo.",
+          img: "../../public/img/02.jpg",
+          name: "ELLEN BRYANT",
+          role: "Videomaker",
+        },
+        {
+          text: "Curabitur bibendum ex ut sapien blandit. Nunc lobartis mi dui, id Etiam tempor sit amet in bibendum. Nunc eros risus, pellentesque a augue Pellentesque fringilla eget mi ei mollis. Mauris commodo.",
+          img: "../../public/img/03.jpg",
+          name: "JOHN DOE",
+          role: "Designer",
+        },
+      ],
       activeIndex: 0,
     };
   },
   methods: {
-    prevJumbo() {
+    prevSlides() {
       this.activeIndex =
         (this.activeIndex - 1 + this.arrJumbos.length) % this.arrJumbos.length;
     },
-    nextJumbo() {
+    nextSlides() {
       this.activeIndex = (this.activeIndex + 1) % this.arrJumbos.length;
     },
   },
@@ -89,7 +109,7 @@ export default {
       class="jumbotron"
       :style="{ 'background-image': `url(${arrJumbos[activeIndex].image})` }"
     >
-      <div class="left-arrow" @click="prevJumbo">
+      <div class="left-arrow" @click="prevSlides">
         <font-awesome-icon :icon="['fass', 'arrow-left']" />
       </div>
       <div class="jumbo-title">
@@ -99,7 +119,7 @@ export default {
           arrJumbos[activeIndex].readMore
         }}</span>
       </div>
-      <div class="right-arrow" @click="nextJumbo">
+      <div class="right-arrow" @click="nextSlides">
         <font-awesome-icon :icon="['fas', 'arrow-right']" />
       </div>
     </div>
@@ -134,24 +154,23 @@ export default {
           :icon="['fas', 'quote-left']"
           style="color: #fcfcfd"
         />
-        <span
-          >Curabitur bibendum ex ut sapien blandit viverra. Nunc lobartis mi
-          dui, id Etiam tempor sit amet metus in bibendum. Nunc eros risus,
-          pellentesque a augue Pellentesque fringilla eget mi eu mollis. Mauris
-          commodo.</span
-        >
+        <span>{{ arrTestimonials[activeIndex].text }}</span>
       </div>
       <div class="employees">
-        <img src="../../public/img/01.jpg" alt="" />
+        <img :src="arrTestimonials[activeIndex].img" alt="" />
         <div class="employees-info">
-          <span>JOHN DOE</span>
-          <span>Designer</span>
+          <span>{{ arrTestimonials[activeIndex].name }}</span>
+          <span>{{ arrTestimonials[activeIndex].role }}</span>
         </div>
       </div>
       <div class="dot-container">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+        <div
+          class="dot"
+          v-for="(testimonial, index) in arrTestimonials"
+          :key="index"
+          @click="activeIndex = index"
+          :class="{ active: activeIndex === index }"
+        ></div>
       </div>
     </div>
     <AppArticles />
@@ -202,6 +221,7 @@ export default {
 
   .jumbo-title {
     margin-right: 25rem;
+    margin-left: 5rem;
     .jumbo-read-more {
       padding: 0.5rem 1rem;
       color: black;
