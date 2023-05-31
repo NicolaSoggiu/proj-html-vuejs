@@ -38,6 +38,12 @@ export default {
       ],
     };
   },
+  methods: {
+    getCardClass(index) {
+      const image = "imgclass3";
+      return image;
+    },
+  },
   components: {
     AppCard,
   },
@@ -51,10 +57,10 @@ export default {
   </div>
   <div class="What-we-do">
     <AppCard
-      class="card"
-      v-for="card in arrWhatWeDo"
+      v-for="(card, index) in arrWhatWeDo"
       :key="card"
       :data="card"
+      :img-class="getCardClass(index)"
     />
   </div>
 </template>
@@ -76,29 +82,13 @@ export default {
 .What-we-do {
   width: 1000px;
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  justify-items: center;
   align-items: center;
-  gap: 1rem;
-}
-
-.card {
-  width: calc((100% / 3) - 2rem);
-  display: flex;
-  flex-direction: column;
   text-align: center;
-  img {
-    aspect-ratio: 1 / 1;
-    width: 60px;
-    padding-bottom: 1rem;
-  }
-  h2 {
-    padding-bottom: 1rem;
-    font-size: 1rem;
-  }
-  span {
-    font-size: 0.6rem;
-  }
+  margin-top: 1rem;
+  margin-bottom: 4rem;
 }
 </style>

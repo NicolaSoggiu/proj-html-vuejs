@@ -86,7 +86,6 @@ export default {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 3rem;
   justify-items: center;
-  align-items: center;
   text-align: center;
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -98,9 +97,5 @@ h2 {
 }
 span {
   font-size: 0.6rem;
-}
-
-.imgclass1 {
-  width: 200px;
 }
 </style>

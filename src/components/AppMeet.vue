@@ -28,6 +28,12 @@ export default {
       ],
     };
   },
+  methods: {
+    getCardClass(index) {
+      const image = "imgclass2";
+      return image;
+    },
+  },
   components: {
     AppCard,
   },
@@ -40,7 +46,12 @@ export default {
     <h1>MEET THE TEAM</h1>
   </div>
   <div class="meet-team">
-    <AppCard v-for="team in arrMeet" :key="team" :data="team" />
+    <AppCard
+      v-for="(team, index) in arrMeet"
+      :key="team"
+      :data="team"
+      :img-class="getCardClass(index)"
+    />
   </div>
 </template>
 
@@ -60,6 +71,7 @@ export default {
 .meet-team {
   display: flex;
   justify-content: center;
+  gap: 1rem;
   padding-inline: 15rem;
   margin-top: 4rem;
   margin-bottom: 4rem;

@@ -15,4 +15,24 @@ export default {
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.imgclass1 {
+  padding-bottom: 1rem;
+  width: 320px;
+}
+
+.imgclass2 {
+  padding-bottom: 1rem;
+  width: 250px;
+}
+
+.imgclass3 {
+  padding-bottom: 1rem;
+  width: 60px;
+}
+
+span {
+  color: grey;
+  margin-top: 1rem;
+}
+</style>
