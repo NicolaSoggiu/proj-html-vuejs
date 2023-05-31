@@ -72,7 +72,6 @@ export default {
               {{ voice.voice }}
             </a>
             <ul v-if="voice.isOpen" class="dropdown-menu">
-              <!-- Contenuto del dropdown menu -->
               <li class="drop">SERVICES</li>
               <li class="drop">OUR WORK FLOW</li>
               <li class="drop">VIDEO THUMBNAIL TYPE</li>
@@ -81,8 +80,9 @@ export default {
         </ul>
       </div>
       <div class="nav-social">
-        <a href="#" v-for="socialMedia in arrIcons" :key="socialMedia">
+        <a href="#" v-for="(socialMedia, index) in arrIcons" :key="index">
           <font-awesome-icon :icon="socialMedia.icon" />
+          <span v-if="index === 0" class="search-line">|</span>
         </a>
       </div>
     </nav>
@@ -142,5 +142,10 @@ header {
       color: white;
     }
   }
+}
+
+.search-line {
+  margin: 0 1rem;
+  color: grey;
 }
 </style>
