@@ -6,11 +6,14 @@ export default {
   data() {
     return {
       isOpen: false,
+      isActive: false,
     };
   },
   methods: {
     toggleDropdown() {
-      this.isOpen = !this.isOpen;
+      if (this.voices.voice === "Pages") {
+        this.isOpen = !this.isOpen;
+      }
     },
   },
 };
@@ -18,7 +21,12 @@ export default {
 
 <template>
   <li>
-    <a href="#" @click="toggleDropdown">{{ voices.voice }}</a>
+    <a
+      href="#"
+      @click="toggleDropdown"
+      :class="{ active: isOpen && voices.voice === 'Pages' }"
+      >{{ voices.voice }}</a
+    >
     <ul v-if="isOpen" class="dropdown-menu">
       <li class="drop">SERVICES</li>
       <li class="drop">OUR WORK FLOW</li>
@@ -38,8 +46,12 @@ a {
 }
 
 .dropdown-menu {
-  z-index: 4;
   position: fixed;
+  margin-top: 1.5rem;
+}
+
+.active + .dropdown-menu {
+  display: block;
 }
 
 .drop {
