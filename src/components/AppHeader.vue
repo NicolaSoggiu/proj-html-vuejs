@@ -1,7 +1,4 @@
 <script>
-import NavbarMenu from "./NavBarMenu.vue";
-import NavbarSocial from "./NavbarSocial.vue";
-
 export default {
   data() {
     return {
@@ -14,6 +11,7 @@ export default {
         },
         {
           voice: "Pages",
+          isOpen: false,
         },
         {
           voice: "About",
@@ -47,9 +45,12 @@ export default {
       ],
     };
   },
-  components: {
-    NavbarMenu,
-    NavbarSocial,
+  methods: {
+    toggleDropdown(voice) {
+      if (voice.voice === "Pages") {
+        voice.isOpen = !voice.isOpen;
+      }
+    },
   },
 };
 </script>
@@ -62,19 +63,27 @@ export default {
       </div>
       <div>
         <ul class="nav-menu">
-          <NavbarMenu
-            v-for="voices in arrNavbarMenu"
-            :key="voices"
-            :voices="voices"
-          />
+          <li
+            v-for="voice in arrNavbarMenu"
+            :key="voice.voice"
+            :class="{ active: voice.isOpen }"
+          >
+            <a href="#" @click="toggleDropdown(voice)">
+              {{ voice.voice }}
+            </a>
+            <ul v-if="voice.isOpen" class="dropdown-menu">
+              <!-- Contenuto del dropdown menu -->
+              <li class="drop">SERVICES</li>
+              <li class="drop">OUR WORK FLOW</li>
+              <li class="drop">VIDEO THUMBNAIL TYPE</li>
+            </ul>
+          </li>
         </ul>
       </div>
       <div class="nav-social">
-        <NavbarSocial
-          v-for="socialMedia in arrIcons"
-          :key="socialMedia"
-          :socialMedia="socialMedia"
-        />
+        <a href="#" v-for="socialMedia in arrIcons" :key="socialMedia">
+          <font-awesome-icon :icon="socialMedia.icon" />
+        </a>
       </div>
     </nav>
   </header>
@@ -82,6 +91,15 @@ export default {
 
 <style lang="scss" scoped>
 // GENERAL
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
 
 header {
   height: 10vh;
@@ -108,6 +126,20 @@ header {
       display: flex;
       gap: 1rem;
       padding-right: 1rem;
+    }
+  }
+}
+.dropdown-menu {
+  position: fixed;
+  margin-top: 1.5rem;
+  .drop {
+    background-color: black;
+    color: lightgrey;
+    padding: 1rem;
+    border: 1px solid white;
+    cursor: pointer;
+    &:hover {
+      color: white;
     }
   }
 }

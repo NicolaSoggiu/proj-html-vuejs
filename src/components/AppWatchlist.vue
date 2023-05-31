@@ -8,7 +8,7 @@ export default {
         {
           img: "../../public/img/Gallery-01.jpg",
           title: "SEVENTEENTH SUMMER",
-          text: "Commercial, Music Video.",
+          text: "Commercial, Music Video",
         },
         {
           img: "../../public/img/Gallery-02.jpg",
