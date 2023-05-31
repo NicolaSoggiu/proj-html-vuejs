@@ -25,8 +25,9 @@ export default {
       href="#"
       @click="toggleDropdown"
       :class="{ active: isOpen && voices.voice === 'Pages' }"
-      >{{ voices.voice }}</a
     >
+      {{ voices.voice }}
+    </a>
     <ul v-if="isOpen" class="dropdown-menu">
       <li class="drop">SERVICES</li>
       <li class="drop">OUR WORK FLOW</li>

@@ -42,7 +42,37 @@ export default {
           img: "../../public/img/02.png",
         },
       ],
+      arrJumbos: [
+        {
+          title: "CINEMATO STUDIO",
+          subtitle: "ACTION AND INSPIRE PEOPLE",
+          image: "../../public/img/blog05.jpg",
+          readMore: "READ MORE",
+        },
+        {
+          title: "CINEMA STUDIO",
+          subtitle: "CREATE FROM SCRATCH",
+          image: "../../public/img/blog04.jpg",
+          readMore: "READ MORE",
+        },
+        {
+          title: "CINEMA STUDIO",
+          subtitle: "WORK WITH US",
+          image: "../../public/img/blog03.jpg",
+          readMore: "READ MORE",
+        },
+      ],
+      activeIndex: 0,
     };
+  },
+  methods: {
+    prevJumbo() {
+      this.activeIndex =
+        (this.activeIndex - 1 + this.arrJumbos.length) % this.arrJumbos.length;
+    },
+    nextJumbo() {
+      this.activeIndex = (this.activeIndex + 1) % this.arrJumbos.length;
+    },
   },
   components: {
     AppWhatWeDo,
@@ -55,19 +85,21 @@ export default {
 
 <template>
   <main>
-    <div class="jumbotron">
-      <div class="left-arrow">
+    <div
+      class="jumbotron"
+      :style="{ 'background-image': `url(${arrJumbos[activeIndex].image})` }"
+    >
+      <div class="left-arrow" @click="prevJumbo">
         <font-awesome-icon :icon="['fass', 'arrow-left']" />
       </div>
       <div class="jumbo-title">
-        <span>CINEMATO STUDIO</span>
-        <h1>
-          ACTION AND <br />
-          ISPIRE PEOPLE
-        </h1>
-        <span class="jumbo-read-more">READ MORE</span>
+        <span>{{ arrJumbos[activeIndex].title }}</span>
+        <h1>{{ arrJumbos[activeIndex].subtitle }}</h1>
+        <span class="jumbo-read-more">{{
+          arrJumbos[activeIndex].readMore
+        }}</span>
       </div>
-      <div class="right-arrow">
+      <div class="right-arrow" @click="nextJumbo">
         <font-awesome-icon :icon="['fas', 'arrow-right']" />
       </div>
     </div>
