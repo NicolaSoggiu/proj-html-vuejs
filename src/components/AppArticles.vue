@@ -7,16 +7,19 @@ export default {
       arrArticles: [
         {
           img: "../../public/img/blog07.jpg",
+          date: "November 06, 2021 by Admin",
           title: "RECAP YOUR LATEST COMPANY EVENT",
           text: "Suspendisse dictum tempor. Ut non faucibus arcu, id elementum est. Suspendisse sed",
         },
         {
           img: "../../public/img/blog01.jpg",
+          date: "May 27, 2022 by Admin",
           title: "HOW TO EDIT A FILM SCORE TO SERVE",
           text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidudnt ut",
         },
         {
           img: "../../public/img/blog02.jpg",
+          date: "May 07, 2022 by Admin",
           title: "ARE YOU READY TO MAKE IT AWESOME",
           text: "Design is our playground. While we create an awesome experience, we like having fun. No animals",
         },
@@ -68,7 +71,7 @@ export default {
     width: calc((100% / 3) - 2rem);
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
 }
 </style>

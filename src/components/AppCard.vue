@@ -10,6 +10,7 @@ export default {
 <template>
   <div>
     <img :class="imgClass" :src="data.img" alt="" />
+    <span class="date">{{ data.date }}</span>
     <h2>{{ data.title }}</h2>
     <span>{{ data.text }}</span>
   </div>
@@ -17,17 +18,14 @@ export default {
 
 <style lang="scss" scoped>
 .imgclass1 {
-  // padding-bottom: 1rem;
   width: 320px;
 }
 
 .imgclass2 {
-  // padding-bottom: 1rem;
   width: 250px;
 }
 
 .imgclass3 {
-  // padding-bottom: 1rem;
   width: 60px;
 }
 
@@ -39,5 +37,9 @@ h2 {
 span {
   color: grey;
   margin-top: 1rem;
+}
+
+.date {
+  font-size: 0.7rem;
 }
 </style>
