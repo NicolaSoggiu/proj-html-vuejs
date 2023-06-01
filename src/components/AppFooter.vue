@@ -175,7 +175,7 @@ footer {
   padding: 2rem 0;
   .line {
     height: 1px;
-    background-color: white;
+    background-color: grey;
     width: 70%;
     margin: 0 auto;
     margin-bottom: 2rem;

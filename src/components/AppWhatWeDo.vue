@@ -6,32 +6,32 @@ export default {
     return {
       arrWhatWeDo: [
         {
-          img: "../../public/img/image14.svg",
+          img: "/img/image14.svg",
           title: "ARRAY OF EQUIPMENT",
           text: "Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus.",
         },
         {
-          img: "../../public/img/image16.svg",
+          img: "/img/image16.svg",
           title: "NEW TECHNOLOGIES",
           text: "Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus.",
         },
         {
-          img: "../../public/img/image18.svg",
+          img: "/img/image18.svg",
           title: "VERSITILE ACTORS",
           text: "Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus.",
         },
         {
-          img: "../../public/img/image15.svg",
+          img: "/img/image15.svg",
           title: "TOP DIRECTORS",
           text: "Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus.",
         },
         {
-          img: "../../public/img/image17.svg",
+          img: "/img/image17.svg",
           title: "MINUTE EDITING",
           text: "Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus.",
         },
         {
-          img: "../../public/img/image19.svg",
+          img: "/img/image19.svg",
           title: "VERSITILE ACTORS",
           text: "Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus.",
         },

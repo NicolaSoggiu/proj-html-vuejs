@@ -27,57 +27,57 @@ export default {
       ],
       arrLogos: [
         {
-          img: "../../public/img/03.png",
+          img: "/img/03.png",
         },
         {
-          img: "../../public/img/04.png",
+          img: "/img/04.png",
         },
         {
-          img: "../../public/img/05.png",
+          img: "/img/05.png",
         },
         {
-          img: "../../public/img/01.png",
+          img: "/img/01.png",
         },
         {
-          img: "../../public/img/02.png",
+          img: "/img/02.png",
         },
       ],
       arrJumbos: [
         {
           title: "CINEMATO STUDIO",
           subtitle: "ACTION AND INSPIRE PEOPLE",
-          image: "../../public/img/blog05.jpg",
+          image: "/img/blog05.jpg",
           readMore: "READ MORE",
         },
         {
           title: "CINEMA STUDIO",
           subtitle: "CREATE FROM SCRATCH",
-          image: "../../public/img/blog04.jpg",
+          image: "/img/blog04.jpg",
           readMore: "READ MORE",
         },
         {
           title: "CINEMA STUDIO",
           subtitle: "WORK WITH US",
-          image: "../../public/img/blog03.jpg",
+          image: "/img/blog03.jpg",
           readMore: "READ MORE",
         },
       ],
       arrTestimonials: [
         {
           text: "Curabitur bibendum ex ut sapien blandit. Nunc lobartis mi dui, id Etiam tempor sit amet in bibendum. Nunc eros risus, pellentesque a augue Pellentesque fringilla eget mi ei mollis. Mauris commodo.",
-          img: "../../public/img/01.jpg",
+          img: "/img/01.jpg",
           name: "JENNIFER ROSE",
           role: "Main Director",
         },
         {
           text: "Curabitur bibendum ex ut sapien blandit. Nunc lobartis mi dui, id Etiam tempor sit amet in bibendum. Nunc eros risus, pellentesque a augue Pellentesque fringilla eget mi ei mollis. Mauris commodo.",
-          img: "../../public/img/02.jpg",
+          img: "/img/02.jpg",
           name: "ELLEN BRYANT",
           role: "Videomaker",
         },
         {
           text: "Curabitur bibendum ex ut sapien blandit. Nunc lobartis mi dui, id Etiam tempor sit amet in bibendum. Nunc eros risus, pellentesque a augue Pellentesque fringilla eget mi ei mollis. Mauris commodo.",
-          img: "../../public/img/03.jpg",
+          img: "/img/03.jpg",
           name: "JOHN DOE",
           role: "Designer",
         },
@@ -253,7 +253,7 @@ export default {
   height: 70vh;
   margin: 0.5rem;
   margin-top: 4rem;
-  background-image: url(../../public/img/About-Us.jpg);
+  background-image: url(/img/About-Us.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   color: white;
@@ -284,7 +284,7 @@ export default {
 .stats {
   height: 35vh;
   margin: 0.5rem;
-  background-image: url(../../public/img/Parallax-01.jpg);
+  background-image: url(/img/Parallax-01.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -307,7 +307,7 @@ export default {
   height: 70vh;
   margin: 0.5rem;
   margin-top: 4rem;
-  background-image: url(../../public/img/Parallax-02.jpg);
+  background-image: url(/img/Parallax-02.jpg);
   background-size: cover;
   .testimonials-text {
     padding-top: 6rem;
@@ -360,7 +360,7 @@ export default {
 .logos {
   height: 35vh;
   margin: 0.5rem;
-  background-image: url(../../public/img/Parallax-03.jpg);
+  background-image: url(/img/Parallax-03.jpg);
   background-size: cover;
   background-position: center;
   display: flex;

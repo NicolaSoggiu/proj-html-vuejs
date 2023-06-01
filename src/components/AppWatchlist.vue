@@ -6,32 +6,32 @@ export default {
     return {
       arrWatchList: [
         {
-          img: "../../public/img/Gallery-01.jpg",
+          img: "/img/Gallery-01.jpg",
           title: "SEVENTEENTH SUMMER",
           text: "Commercial, Music Video",
         },
         {
-          img: "../../public/img/Gallery-02.jpg",
+          img: "/img/Gallery-02.jpg",
           title: "A MESSAGE TO SPACE",
           text: "Short Film",
         },
         {
-          img: "../../public/img/Gallery-03.jpg",
+          img: "/img/Gallery-03.jpg",
           title: "THE MOST BEAUTIFUL THING",
           text: "Music Video",
         },
         {
-          img: "../../public/img/Gallery-04.jpg",
+          img: "/img/Gallery-04.jpg",
           title: "PERMISSION TO SPEAK",
           text: "Documentary",
         },
         {
-          img: "../../public/img/Gallery-05.jpg",
+          img: "/img/Gallery-05.jpg",
           title: "EXPLORE OUR SPACE",
           text: "Film noir",
         },
         {
-          img: "../../public/img/Gallery-06.jpg",
+          img: "/img/Gallery-06.jpg",
           title: "FILM PRODUCTION",
           text: "Blaxploitation",
         },

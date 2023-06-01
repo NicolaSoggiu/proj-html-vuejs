@@ -59,7 +59,7 @@ export default {
   <header>
     <nav class="navbar">
       <div class="nav-logo">
-        <img src="../../public/img/logo.svg" alt="" />
+        <img src="/img/logo.svg" alt="" />
       </div>
       <div>
         <ul class="nav-menu">
